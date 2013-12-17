@@ -1,0 +1,9 @@
+#!/usr/bin/env perl
+use Mojolicious::Lite;
+
+plugin 'Mobi';
+
+get '/' => (mobile=>1) => {text=>"This is a MOBILE version of this site."};
+get '/' => {text=>"This is NOT a mobile version of this site."};
+
+app->start;
